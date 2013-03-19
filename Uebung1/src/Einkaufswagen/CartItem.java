@@ -11,6 +11,7 @@ public class CartItem {
 	}
 	public double getCost(){
 		//hier muss noch was hin!
+		//commit backwards
 		
 		
 		return 0;
