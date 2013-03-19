@@ -1,22 +1,28 @@
 package Einkaufswagen;
 
-import java.util.Scanner;
 
 
 public class CartItem {
-	private Scanner artikelEingabe = new Scanner(System.in);
+	private String name; 
+	private int quantity;
+	private double pricePerUnit;
+	
 	public CartItem(String name, int quantity, double pricePerUnit){
-		
-		
+		this.name = name; //uebergebenen Wert in die privaten Variablen schreiben
+		this.quantity = quantity;
+		this.pricePerUnit = pricePerUnit;
 	}
 	public double getCost(){
-		//hier muss noch was hin!
-		//commit backwards
-		
-		
-		return 0;
+		double itemCost = pricePerUnit * quantity;
+		return itemCost;
 	}
-	void setQuantity(int quantity){
-		
+	public void setQuantity(int quantity){
+		if (quantity < 1) {
+			quantity = 1;
+		}
+		this.quantity = quantity;		
+	}
+	public String toString(){
+		return " " + this.name + this.pricePerUnit;
 	}
 }
