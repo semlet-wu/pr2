@@ -10,7 +10,7 @@ public class CartItem {
 		
 	}
 	public double getCost(){
-		
+		//hier muss noch was hin
 		
 		
 		return 0;
