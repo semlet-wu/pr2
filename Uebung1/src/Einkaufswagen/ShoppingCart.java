@@ -23,11 +23,18 @@ public class ShoppingCart {
 		
 		return totalCost;
 	}
+	//Stringbuilder?!
+	//Das geht auch ohne getter, zur Uebung aber mal mit programmiert.
 	public String toString(){
-		String liste = null;
-		for ( CartItem listenInhalt : Einkaufswagen){
-			liste = listenInhalt.toString();
+		StringBuilder sb = new StringBuilder();
+		
+		for (CartItem a : Einkaufswagen){		
+		sb.append(a.getQuantity() + " x " + 
+				  a.getName() + " \t\t\t" + 
+				  a.getpricePerUnit() + " \t" + 
+				  a.getCost() + " \n");
 		}
-		return liste;
+		return sb.toString();
 	}
+	
 }

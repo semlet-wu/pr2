@@ -25,4 +25,13 @@ public class CartItem {
 	public String toString(){
 		return " " + this.name + this.pricePerUnit;
 	}
+	public int getQuantity(){
+		return this.quantity;
+	}
+	public String getName(){
+		return this.name;
+	}
+	public double getpricePerUnit(){
+		return this.pricePerUnit;
+	}
 }
