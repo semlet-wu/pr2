@@ -26,8 +26,8 @@ public class Einkaufswagen {
 		//double summaSumarum = einkaufsTuete.getTotalCost();
 		//System.out.println(summaSumarum);
 		
-		String titten = einkaufsTuete.toString();
-		System.out.println(titten);
+		String ausgabe = einkaufsTuete.toString();
+		System.out.println(ausgabe);
 	}
 
 }

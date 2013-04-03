@@ -1,13 +1,16 @@
 package Einkaufswagen;
 
 import java.util.ArrayList;
+import java.util.Formatter;
+import java.util.Locale;
+
 import Einkaufswagen.CartItem;
 
 public class ShoppingCart {
-	ArrayList<CartItem> Einkaufswagen= new ArrayList<CartItem>();
-	
+	ArrayList<CartItem> Einkaufswagen= null;
+
 	public ShoppingCart(){
-		
+		Einkaufswagen= new ArrayList<CartItem>();
 	}
 	
 	public void add(CartItem item){
@@ -23,18 +26,18 @@ public class ShoppingCart {
 		
 		return totalCost;
 	}
-	//Stringbuilder?!
-	//Das geht auch ohne getter, zur Uebung aber mal mit programmiert.
+	 
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
-		
-		for (CartItem a : Einkaufswagen){		
-		sb.append(a.getQuantity() + " x " + 
-				  a.getName() + " \t\t\t" + 
-				  a.getpricePerUnit() + " \t" + 
-				  a.getCost() + " \n");
+		for(CartItem itemDesWagens : Einkaufswagen){
+			sb.append(System.getProperty("line.separator") + "  " + itemDesWagens.toString() + "\n");
 		}
+		Formatter formatter= new Formatter(new Locale("de", "DE"));
+		sb.append(System.getProperty("line.separator") + System.getProperty("line.separator") + 
+														 "Summe:\t\t\t\t\t\t\t\t" + formatter.format("%,10.2f", getTotalCost()));
+		formatter.close();
+			
 		return sb.toString();
-	}
-	
+	}	
 }
+
