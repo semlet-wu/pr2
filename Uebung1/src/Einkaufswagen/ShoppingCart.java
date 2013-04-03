@@ -33,7 +33,7 @@ public class ShoppingCart {
 			sb.append(System.getProperty("line.separator") + "  " + itemDesWagens.toString() + "\n");
 		}
 		Formatter formatter= new Formatter(new Locale("de", "DE"));
-		sb.append(System.getProperty("line.separator") + System.getProperty("line.separator") + 
+		sb.append(System.getProperty("line.separator") + System.getProperty("line.separator") +
 														 "Summe:\t\t\t\t\t\t\t\t" + formatter.format("%,10.2f", getTotalCost()));
 		formatter.close();
 			

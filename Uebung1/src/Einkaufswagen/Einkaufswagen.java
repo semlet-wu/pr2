@@ -5,9 +5,7 @@ import Einkaufswagen.ShoppingCart;
 
 public class Einkaufswagen {
 
-	/**
-	 * @param args
-	 */
+
 	public static void main(String[] args) {
 		ShoppingCart einkaufsTuete = new ShoppingCart();
 		
@@ -26,8 +24,7 @@ public class Einkaufswagen {
 		//double summaSumarum = einkaufsTuete.getTotalCost();
 		//System.out.println(summaSumarum);
 		
-		String ausgabe = einkaufsTuete.toString();
-		System.out.println(ausgabe);
+		System.out.println(einkaufsTuete.toString());
 	}
 
 }
