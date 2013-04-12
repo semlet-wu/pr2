@@ -15,7 +15,7 @@ public class LineMain {
 	public static void picasso(){
 		Point a = new Point();
 		Point b = new Point();
-		Line linie = new Line(a, b, 5);
+		Line linie = new Line(a,b);
 		
 		DrawingPanel panel = new DrawingPanel(200, 200);
 		Graphics g = panel.getGraphics();
@@ -37,6 +37,7 @@ public class LineMain {
 			b.setLocation(x2,y2-(x*j));
 			linie.draw(g);
 		}
+		
 		System.out.println(linie.toString());
 	}
 	public static void gestrichelt(){

@@ -15,11 +15,8 @@ public class DashedLine extends Line{
 	
 	@Override public void draw(Graphics g){
 		
-
-		
 		g.drawLine(super.getp1().getX(), super.getp1().getY(), super.getp2().getX(), super.getp2().getY());
 	
-		
 	}
 	
 	
