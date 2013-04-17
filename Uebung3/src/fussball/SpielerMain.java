@@ -8,7 +8,8 @@ public class SpielerMain {
 	public static void main(String[] args) {
 		ArrayList<Spieler> mannschaft = new ArrayList<Spieler>();
 		
-		////
+
+		//
 		
 		mannschaft.add(new Spieler("meier"));
 		mannschaft.add(new Spieler("mueller"));
