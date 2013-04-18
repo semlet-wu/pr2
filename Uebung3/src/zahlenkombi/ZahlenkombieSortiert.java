@@ -43,6 +43,6 @@ public class ZahlenkombieSortiert extends Zahlenkombi{
     	for(Long d : timings){
     		time += d;
     	} 
-    	System.out.println("Zeit: " + (double)time/timings.size() + "ms");
+    	System.out.println("Zeit: " + (double)time/timings.size()  + "ms");
     }
 }
