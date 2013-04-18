@@ -1,9 +1,9 @@
 [x] a) Leiter koennen ihren Namen auslesen
 [ ] b) Leiter koennen ihre ID auslesen
-[ ] c) Bueroangestellte können ihre ID auslesen
-[x] d) Bueroangestellte können ihren Namen auslesen
-[ ] e) Bueroangestellte können ihre Bewertung auslesen
-[ ] f) Bueroangestellte können den Kredit von Kunden auslesen
+[ ] c) Bueroangestellte koennen ihre ID auslesen
+[x] d) Bueroangestellte koennen ihren Namen auslesen
+[ ] e) Bueroangestellte koennen ihre Bewertung auslesen
+[ ] f) Bueroangestellte koennen den Kredit von Kunden auslesen
 [x] g) Personen koennen den Namen anderer Personen auslesen
 [x] h) Personen koennen die ID anderer Personen auslesen
 [x] i) Leiter koennen den Kredit von Kunden auslesen

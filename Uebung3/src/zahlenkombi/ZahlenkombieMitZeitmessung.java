@@ -1,41 +1,31 @@
 package zahlenkombi;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 public class ZahlenkombieMitZeitmessung extends Zahlenkombi{
 	
-	private int[] zahlen;
-	private ArrayList<Double> zeitmessungen = new ArrayList<Double>();
+
+	private static long time = 0;
+    private static long count = 0;
+    private static long start;
+    private static long end;
 
 	public ZahlenkombieMitZeitmessung(int max) {
 		super(max);
-		zahlen= new int[10000];
-        Random rand= new Random();
-        for (int i=0; i<zahlen.length; i++) {
-            zahlen[i]= rand.nextInt(max);
         }
-	}
+	
 	
 	@Override public boolean istEnthalten(int zahl){
 		
-        double start = System.currentTimeMillis();
+        start = System.currentTimeMillis();
+
+        boolean temp = super.istEnthalten(zahl);
+        end = System.currentTimeMillis();
         
-		for (int i=0; i<zahlen.length; i++) {
-            if (zahlen[i]== zahl) {
-    			double end = System.currentTimeMillis();
-    			zeitmessungen.add(end - start);
-                return true;
-            }
+        count++;
+        time += end-start;
+        return temp;
         
-        }
-        return false;
     }
 	public void zeitmessung(){
-		double time = 0.0;
-		for( double a : zeitmessungen){
-			time += a;
-		}
-		System.out.println("Zeit: " + time/zeitmessungen.size() + "ms");
+		System.out.println("Zeit: " + (double) time/count + "ms");
 	}
 }

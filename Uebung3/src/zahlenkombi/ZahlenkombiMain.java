@@ -13,9 +13,8 @@ public class ZahlenkombiMain {
         for (int i=0; i<kombi.getMax(); i++) {
             if (kombi.istEnthalten(i)) {
                 System.out.println(i);
+                
             }
-        }
+        }        
     }
-    
-    
 }

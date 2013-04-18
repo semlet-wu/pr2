@@ -31,4 +31,7 @@ public class Zahlenkombi {
         }
         return false;
     }
+    public int[] getZahlenArray(){
+    	return zahlen;
+    }
 }

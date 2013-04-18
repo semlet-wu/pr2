@@ -18,7 +18,7 @@ public class Spieler {
 	}
 	
 	@Override public String toString(){
-		return (name + " (" + nummer++ + ")");
+		return (name + " (" + nummer + ")");
 	}
 	
 	
