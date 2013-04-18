@@ -2,14 +2,14 @@ package zahlenkombi;
 
 import java.util.Arrays;
 
-public class ZahlenkombieSortiert extends Zahlenkombi{
+public class ZahlenkombiSortiert extends Zahlenkombi{
 	
 	private static int timings;
 	private static long start;
 	private static long end;
 	private static long time;
 	
-	public ZahlenkombieSortiert(int max) {
+	public ZahlenkombiSortiert(int max) {
 		super(max);
 	}
 	

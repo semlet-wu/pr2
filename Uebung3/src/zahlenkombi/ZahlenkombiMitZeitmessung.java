@@ -1,6 +1,6 @@
 package zahlenkombi;
 
-public class ZahlenkombieMitZeitmessung extends Zahlenkombi{
+public class ZahlenkombiMitZeitmessung extends Zahlenkombi{
 	
 
 	private static long time = 0;
@@ -8,7 +8,7 @@ public class ZahlenkombieMitZeitmessung extends Zahlenkombi{
     private static long start;
     private static long end;
 
-	public ZahlenkombieMitZeitmessung(int max) {
+	public ZahlenkombiMitZeitmessung(int max) {
 		super(max);
         }
 	

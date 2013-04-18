@@ -5,7 +5,7 @@ public class ZahlenkombiMain {
     public static void main(String[] args) {
         //Zahlenkombi kombi= new Zahlenkombi(100000);
         //ZahlenkombieMitZeitmessung kombi = new ZahlenkombieMitZeitmessung(10000);
-    	ZahlenkombieSortiert kombi = new ZahlenkombieSortiert(10000);
+    	ZahlenkombiSortiert kombi = new ZahlenkombiSortiert(10000);
     	suche(kombi);
         kombi.zeitmessung();
     }
