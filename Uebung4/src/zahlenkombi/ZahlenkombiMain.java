@@ -1,7 +1,5 @@
 package zahlenkombi;
 
-import java.util.TreeSet;
-
 public class ZahlenkombiMain {
 
 	public static void main(String[] args) {

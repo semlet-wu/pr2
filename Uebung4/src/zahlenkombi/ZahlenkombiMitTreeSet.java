@@ -23,6 +23,4 @@ public class ZahlenkombiMitTreeSet implements IZahlenkombi{
 	@Override public boolean istEnthalten(int zahl){
 		return (tree.contains(zahl));
 	}
-
-	
 }

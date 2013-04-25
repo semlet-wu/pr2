@@ -1,11 +1,11 @@
-						Zeilennummern		Erläuterung
+						Zeilennummern		Erlaeuterung
 		
-Compilerfehler			09					auf die Methode c kann von a nicht zugegriffen werden
+Compilerfehler			09					auf die Methode b kann von a nicht zugegriffen werden
 						13					auf die Methode c kann von a nicht zugegriffen werden
 						14					auf die Methode c kann von b nicht zugegriffen werden
 						19/20				Da hier der Typ A initialisiert wird kann hier auch nicht auf die Methode
 											b oder c zugegriffen werden. Da der Compiler versteht x als eine variable
-											in der man jede Sorte von A's speichern kann, aber Ob und welcher Subtyp ist unklar
+											in der man jede Sorte von A's speichern kann, aber ob und welcher Subtyp ist unklar
 											A ist der Statische Typ, B ist der Dynamische Typ, der kann sich zu Laufzeit ändern.
 
 Laufzeitfehler

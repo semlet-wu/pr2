@@ -6,19 +6,13 @@ public class Bruch {
 	private int down;
 	
 	public Bruch(int top){
-		this.top = top;
-		this.down = 1;
+		setZaehler(top);
+		setNenner(1);
 		
 	}
 	public Bruch(int top, int down){
-		this.top = top;
-		
-		if(down == 0){
-			System.out.println("Der Nenner darf niemals 0 sein, auf 1 gesetzt!");
-			this.down = 1;
-		}
-		else this.down = down;
-	//
+		setZaehler(top);
+		setNenner(down);
 	}
 	public int getZaehler(){
 		return this.top;
@@ -26,14 +20,14 @@ public class Bruch {
 	public int getNenner(){
 		return this.down;
 	}
-	public int setZaehler(int top){
-		return this.top = top;
+	public void setZaehler(int top){
+		this.top = top;
 	}
-	public int setNenner(int down){
+	public void setNenner(int down){
 		if(down == 0){
 			throw new IllegalArgumentException("Nenner darf nicht 0 sein.");
 		}
-		else return this.down = down;
+		else this.down = down;
 	}
 	public double ergebnis(){
 		return (double) getZaehler() / (double) getNenner();
