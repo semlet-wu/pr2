@@ -11,7 +11,7 @@ public class SpielerMain {
 
 		//
 		
-		mannschaft.add(new Spieler("meier"));
+		//mannschaft.add(new Spieler("meier"));
 		mannschaft.add(new Spieler("mueller"));
 		mannschaft.add(new Spieler("schulze"));
 		mannschaft.add(new Spieler("vodka"));
