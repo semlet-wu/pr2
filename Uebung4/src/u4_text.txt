@@ -1,0 +1,25 @@
+						Zeilennummern		Erläuterung
+		
+Compilerfehler			09					auf die Methode c kann von a nicht zugegriffen werden
+						13					auf die Methode c kann von a nicht zugegriffen werden
+						14					auf die Methode c kann von b nicht zugegriffen werden
+						19/20				Da hier der Typ A initialisiert wird kann hier auch nicht auf die Methode
+											b oder c zugegriffen werden. Da der Compiler versteht x als eine variable
+											in der man jede Sorte von A's speichern kann, aber Ob und welcher Subtyp ist unklar
+											A ist der Statische Typ, B ist der Dynamische Typ, der kann sich zu Laufzeit ändern.
+
+Laufzeitfehler
+						24					Zu tiefer downcast					
+
+Explizite Downcasts
+						23					Downcast auf den Typ B
+Explizite Upcasts
+						22					Upcast der keinen Sinn macht
+Implizite Upcasts
+						06/07/11/17				
+
+--- Aufgabe 4 ---
+Substitutionsprinz: Jedes Objekt des Subtyps kann aus sicht eines Clients ein Objekt des Supertypes ersetzen.
+					Das geht hier nicht, da Patternline ein Array mit einer graden anzahl von Objekten benötigt,
+					aber Dottedline benötigt ein Array mit nur einem Element. Deswegen kann Dottedline nie eine Patternline sein.
+

@@ -49,5 +49,4 @@ public class Bruch {
 	@Override public int hashCode(){
 		return this.top / this.down;
 	}
-
 }
