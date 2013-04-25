@@ -20,7 +20,6 @@ public class Bruch {
 		else this.down = down;
 	
 	}
-	////
 	public int getZaehler(){
 		return this.top;
 	}
