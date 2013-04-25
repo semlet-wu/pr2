@@ -18,7 +18,7 @@ public class Bruch {
 			this.down = 1;
 		}
 		else this.down = down;
-	
+	//
 	}
 	public int getZaehler(){
 		return this.top;
