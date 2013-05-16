@@ -10,14 +10,14 @@ public class MedienMain {
 		Medium[] medien= {
 		new Buch("Gesund grillen", 2010, "", "George Forman"),
 		new CD("Ein Herz aus Schokolade", 2011, "Die Flippers", 40),
-		new Zeitschrift("Hardcore Hacking fuer Neulinge", 2005, 17) };
+		new Zeitschrift("Linux fuer NOOBZ.", 2005, 17) };
 		
 		for(Medium m : medien){
 			System.out.println(m);
 			System.out.println("  Leihfrist: " + m.getLeihFrist());
 		}
 		
-	
+		System.out.println("-----------------------------------");
 		Arrays.sort(medien);
 		
 		for(Medium m : medien){

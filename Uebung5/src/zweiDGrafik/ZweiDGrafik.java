@@ -9,7 +9,7 @@ import com.bjp.DrawingPanel;
 
 public class ZweiDGrafik{
 	
-	private static DrawingPanel panel = new DrawingPanel(500, 500);
+	private static DrawingPanel panel = new DrawingPanel(400, 400);
 	private static Graphics g = panel.getGraphics();
 	public static void main(String[] args){
 		eins();

@@ -28,7 +28,7 @@ public class CD extends Medium{
 	}
 
 	public void setKuenstler(String kuenstler){
-		if(kuenstler == null || kuenstler.equals(""))
+		if(kuenstler == null || kuenstler.equals(" "))
 			throw new IllegalArgumentException("Kuenstler muss angegeben werden");
 		else
 			this.kuenstler= kuenstler;

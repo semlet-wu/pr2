@@ -17,7 +17,7 @@ public abstract class Medium implements Comparable<Medium>{
 	}
 
 	public void setTitel(String titel){
-		if(titel == null || titel.equals(""))
+		if(titel == null || titel.equals(" "))
 			throw new IllegalArgumentException("Titel darf nicht leer sein");
 		else
 			this.titel= titel;

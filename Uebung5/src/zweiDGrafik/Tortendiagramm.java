@@ -26,37 +26,37 @@ public class Tortendiagramm {
 	}
 	
  
-	public int setScaleFactor(){ 
+	public int scale(){ 
 		return (int) (this.scale * dp.getWidth());
 	}
 	
  
-	public int middleChartX(){
-		return (dp.getHeight()/2) - (setScaleFactor()/2);
+	public int mChartX(){
+		return (dp.getHeight()/2) - (scale()/2);
 	}
-	public int middleChartY(){
-		return (dp.getWidth()/2) - (setScaleFactor()/2);
+	public int mChartY(){
+		return (dp.getWidth()/2) - (scale()/2);
 	}
 	
 	
-	public Point setLabelCoords(double winkelstart, double winkelende, String label, Graphics2D g){
-		int mittelpunktX = dp.getHeight()/2;
-		int mittelpunktY = dp.getWidth()/2;
-		int winkelhaelfte = (int) (winkelstart + winkelende/2);
-		int radius = setScaleFactor()/2;
+	public Point setLabelCoords(double wStart, double wEnde, String label, Graphics2D g){
+		int centerX = dp.getHeight()/2;
+		int centerY = dp.getWidth()/2;
+		int winkelHaelfte = (int) (wStart + wEnde/2);
+		int radius = scale()/2;
 		
 	
-		Point labelCoords = new Point();
-		labelCoords.x = (int) (mittelpunktX + radius * Math.cos(Math.toRadians(winkelhaelfte)) * 1.2);
-		labelCoords.y = (int) (mittelpunktY - radius * Math.sin(Math.toRadians(winkelhaelfte)) * 1.2);
+		Point textCoords = new Point();
+		textCoords.x = (int) (centerX + radius * Math.cos(Math.toRadians(winkelHaelfte)) * 1.1);
+		textCoords.y = (int) (centerY - radius * Math.sin(Math.toRadians(winkelHaelfte)) * 1.1);
 		
 	
 		FontMetrics fm = g.getFontMetrics();
-		if(labelCoords.x < mittelpunktX){
+		if(textCoords.x < centerX){
 			Rectangle2D rect = fm.getStringBounds(label, g);
-			labelCoords.x -= rect.getMaxX();
+			textCoords.x -= rect.getMaxX();
 		}
-		return labelCoords;
+		return textCoords;
 	}
 	
  
@@ -64,28 +64,29 @@ public class Tortendiagramm {
 		Graphics2D g = dp.getGraphics();
 		
  
-		int gesamtwert = 0;
+		int sum = 0;
+		
 		for(Double i : values)
-			gesamtwert += i;
+			sum += i;
  
 		
  
-		double winkelstart = 0;  
+		double wStart = 0;  
 		for(int i=0; i<values.length; i++){
 			
 			 
-			double winkelende = (360 * this.values[i]) / gesamtwert;  
+			double wEnde = (360 * this.values[i]) / sum;  
 			g.setColor(this.colors[i]);
-			g.fillArc(middleChartX(), middleChartY(), setScaleFactor(), setScaleFactor(), (int) winkelstart, (int) winkelende);
+			g.fillArc(mChartX(), mChartY(), scale(), scale(), (int) wStart, (int) wEnde);
 			
 			 
 			String label = labels[i] + "(" + values[i] + ")";
-			Point p = setLabelCoords(winkelstart, winkelende, label, g);
+			Point p = setLabelCoords(wStart, wEnde, label, g);
 			g.setColor(this.colors[i]);
 			g.drawString(label, p.x, p.y);
 			
 
-			winkelstart += winkelende; 
+			wStart += wEnde; 
 		}
 	}
 }

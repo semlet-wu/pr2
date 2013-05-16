@@ -29,14 +29,14 @@ public class Buch extends Medium{
 	
 	
 	public void setVerlag(String verlag){
-		if(verlag == null || verlag.equals(""))
+		if(verlag == null || verlag.equals(" "))
 			throw new IllegalArgumentException("Verlag darf nicht leer sein");
 		else
 			this.verlag= verlag;
 	}
 	
 	public void setAutor(String autor){
-		if(autor == null || autor.equals(""))
+		if(autor == null || autor.equals(" "))
 			throw new IllegalArgumentException("Verlag darf nicht leer sein");
 		else
 			this.autor= autor;
